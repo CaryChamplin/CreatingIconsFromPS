@@ -1,5 +1,5 @@
 //=============================================================================
-// Photoshop sript to create iPhone, iPad, Apple Watch and Mac icons from a
+// Photoshop script to create iPhone, iPad, Apple Watch and Mac icons from a
 // square image (size >= 1024 x 1024 pixels).
 //
 // Copyright (c) 2010 Matt Di Pasquale
