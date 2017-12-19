@@ -15,12 +15,11 @@ PS supports use of external script files (e.g., JavaScript) that can be executed
 
 ![Pull-down menu for AI scripts](https://github.com/CaryChamplin/CreatingIconsFromPS/blob/master/ps_file-scripts.png)
 
+A resampling method is applied in the JavaScript file to generate the smaller icons from the original PNG image file. The icon image quality is directly related to the resampling method. For PS, the list of resampling methods are: AUTOMATIC, BICUBIC, BICUBICAUTOMATIC, BICUBICSHARPER, BICUBICSMOOTHER, BILINEAR, NEARESTNEIGHBOR, and PRESERVEDETAILS. I selected a mid-sized icon (76x76 pixels) from one of my projects under development as an example of the icon image differences due to resampling. Most of the time, I use either BICUBICSMOOTHER or BILINEAR for resampling. For this specific icon example, I prefer the BICUBICSMOOTHER resample method.
 
-**Open Issue: Edge Artifact on Downsampling**
+![Comparison of resample methods for an icon example](https://github.com/CaryChamplin/CreatingIconsFromPS/blob/master/icon76_ps_resampling-methods.png)
 
-I am seeing an edge artifact (1 pixel wide along edges between high contrast objects) that could be associated with the downsampling option. Here is an example (76x76 pixels). What's interesting is I don't see this artifact with my Illustrator icon scripts. Just need to find a little time to resolve. It does imply that professional grade commercial apps should be tweaked at each resolution for optimal pixel-level design.
-
-![1-pixel wide top and left edge artifact example](https://github.com/CaryChamplin/CreatingIconsFromPS/blob/master/iPad_76.png)
+A final note: While this approach works, icons for professional-grade commercial apps should be reviewed and tweaked at each resolution for optimal pixel-level design, preferably by an expert graphic designer. It is a detail consistent with excellence.
 
 
 

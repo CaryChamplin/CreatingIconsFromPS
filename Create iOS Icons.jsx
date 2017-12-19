@@ -1,6 +1,6 @@
 //=============================================================================
-// Photoshop script to create iPhone, iPad, Apple Watch and Mac icons from a
-// square image (size >= 1024 x 1024 pixels).
+// Photoshop Script to Create iPhone, iPad, Apple Watch and Mac Icons from a
+// square image (size >= 1024 x 1024 pixels)
 //
 // Copyright (c) 2010 Matt Di Pasquale
 // Added tweaks Copyright (c) 2012 by Josh Jones ( https://gist.github.com/twonjosh )
@@ -29,24 +29,20 @@
 //    - image must be square
 //    - image size must be at least 1024x1024 px
 //
-// 2) Save the file 'Create iOS Icons.jsx' file to the following folder:
-//    - default location for scripts within Photoshop
-//    - following folder path assumes MacOS and Adobe Photoshop 2018
+// 2) Save the file 'Create iOS Icons.jsx' file to the following folder
+//    - the following folder path assumes MacOS and Adobe Photoshop 2018
 //    	/Applications/Adobe Photoshop CC 2018/Presets/Scripts/
 //
 // 3) Restart Photoshop
 //
-// 4) With Photoshop open, select File > Scripts > Create iOS Icons:
+// 4) With Photoshop open, select File > Scripts > Create iOS Icons
 //    - When prompted, select the PNG image file from Step 1.
 //    - When prompted, select the destination folder for saving the icons.
 //-----------------------------------------------------------------------------
 // References:
-//  Adobe Photoshop JavaScript Reference
-//    http://www.adobe.com/devnet/photoshop/scripting.html
-//  Apple iOS Human Interface Guidelines
-//    https://developer.apple.com/ios/human-interface-guidelines/
-//  Apple Mac OS Human Interface Guidelines
-//    https://developer.apple.com/macos/human-interface-guidelines/
+//	Adobe Photoshop JavaScript References
+// 		http://www.adobe.com/devnet/photoshop/scripting.html
+//    http://wwwimages.adobe.com/content/dam/acom/en/devnet/photoshop/pdfs/photoshop-cc-javascript-ref-2015.pdf
 //=============================================================================
 
 try
@@ -138,12 +134,18 @@ try
      {"name": "watch_98@2x",          "size":98*2}
     ];
 
+    // some of the options for ResampleMethod per JS scripting reference (page 212)
+    // .BICUBIC
+    // .BICUBICSMOOTHER
+    // .BILINEAR
+    // .PRESERVEDETAILS
+
     var icon;
     for (i = 0; i < icons.length; i++)
     {
       icon = icons[i];
       doc.resizeImage(icon.size, icon.size, // width, height
-                      null, ResampleMethod.BICUBICSHARPER);
+                      null, ResampleMethod.BICUBICSMOOTHER);
 
       var destFileName = icon.name + ".png";
 
