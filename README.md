@@ -5,7 +5,7 @@ According to Apple's [iOS Human Interface Guidelines](https://developer.apple.co
 
 [Adobe Photoshop](http://www.adobe.com/products/photoshop.html) (PS) can be used for creating the icon designs for both iOS and Mac OS. [PS scripts](http://www.adobe.com/devnet/photoshop/scripting.html) permits the use of a single artboard on PS (or in this case, a single PNG file with a size of at least 1024x1024 pixels) to build the entire set of iPhone, iPad, Mac OS, and Apple Watch icons automagically.
 
-**PS Scripts for Creating iOS and Mac OS App Icons**
+### PS Scripts for Creating iOS and Mac OS App Icons
 
 PS supports use of external script files (e.g., JavaScript) that can be executed on a particular PS document from within PS or an image file. Here are the details:
 
@@ -15,7 +15,9 @@ PS supports use of external script files (e.g., JavaScript) that can be executed
 
 ![Pull-down menu for AI scripts](https://github.com/CaryChamplin/CreatingIconsFromPS/blob/master/ps_file-scripts.png)
 
-A resampling method is applied in the JavaScript file to generate the smaller icons from the original PNG image file. The icon image quality is directly related to the resampling method. For PS, the list of resampling methods are: AUTOMATIC, BICUBIC, BICUBICAUTOMATIC, BICUBICSHARPER, BICUBICSMOOTHER, BILINEAR, NEARESTNEIGHBOR, and PRESERVEDETAILS. I selected a mid-sized icon (76x76 pixels) from one of my projects under development as an example of the icon image differences due to resampling. Most of the time, I use either BICUBICSMOOTHER or BILINEAR for resampling. For this specific icon example, I prefer the BICUBICSMOOTHER resample method.
+### Selection of a PS Resampling Method
+
+A resampling method is applied in the JavaScript file to generate the smaller icons from the original PNG image file. The icon image quality is directly related to the resampling method. For PS, the list of resampling methods are: AUTOMATIC, BICUBIC, BICUBICAUTOMATIC, BICUBICSHARPER, BICUBICSMOOTHER, BILINEAR, NEARESTNEIGHBOR, and PRESERVEDETAILS. I selected a mid-sized icon (76x76 pixels) from one of my projects under development as an example of the icon image differences due to resampling methods. Most of the time, I use either BICUBICSMOOTHER or BILINEAR for resampling. For this specific icon example, I prefer the BICUBICSMOOTHER resample method.
 
 ![Comparison of resample methods for an icon example](https://github.com/CaryChamplin/CreatingIconsFromPS/blob/master/icon76_ps_resampling-methods.png)
 
